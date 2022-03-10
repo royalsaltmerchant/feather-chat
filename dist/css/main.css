@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
 
 :root {
 	--dark-color: #969696;
-	--dark3-color: #535353;
+	--dark3-color: #525151;
 	--dark2-color: #6e6e6e;
 	--light-color: #dadada;
 	--main-padding: 7px;
@@ -78,7 +78,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	box-shadow: 0px 4px 10px 3px #1f1f1f;
+	box-shadow: 1px 5px 10px 1px #2b2b2b;
 }
 
 .form-item {
@@ -110,12 +110,13 @@ input {
 }
 
 button {
-	background-color: var(--blue);
+	background: linear-gradient(rgb(129, 172, 201) 10%, var(--blue) 90%);
 	color: inherit;
-	border: 0.1px solid black;
+	border: 0.1px solid #275f94;
 	border-radius: var(--border-radius);
 	padding: 5px 10px;
 	font: inherit;
+	text-shadow: inherit;
 	font-size: larger;
 	cursor: pointer;
 }
