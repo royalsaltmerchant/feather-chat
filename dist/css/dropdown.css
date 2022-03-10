@@ -9,6 +9,7 @@
   position: relative;
   color: black;
   text-shadow: none;
+  border-radius: var(--border-radius);
 }
 .dropdown_value {
   display: inline-block;

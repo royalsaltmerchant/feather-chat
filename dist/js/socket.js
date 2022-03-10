@@ -42,15 +42,25 @@ chatForm.addEventListener('submit', (e) => {
     e.target.elements.msg.focus()
 })
 
+function getUsernameClass(message) {
+    if(message.username === username) {
+        return 'username'
+    }
+    else if(message.username === 'Feather-Bot') {
+        return 'bot'
+    } else return 'not-username'
+}
+
 // output message to dom
 function outputMessage(message) {
     const div = document.createElement('div')
     div.classList.add('message')
     div.innerHTML = /*html*/ `
-        <p class="meta">${message.username} <span>${message.time}</span></p>
+        <p class=${getUsernameClass(message)}>${message.username} <span class="time">${message.time}</span></p>
         <p class="text">
             ${message.text}
         </p>
+        <br>
     `
     chatMessages.appendChild(div)
 }
@@ -63,6 +73,10 @@ function outputRoomName(room) {
 // add users to dom
 function outputUsers(users) {
     userList.innerHTML = /*html*/ `
-        ${users.map(user => /*html*/ `<li>${user.username}</li>`).join('')}
+        ${users.map(user => {
+            if(user.username === username) {
+                return /*html*/ `<li class="username">${user.username}</li>`
+            } else return /*html*/ `<li class="not-username">${user.username}</li>`
+        }).join('')}
     `
 }
