@@ -100,8 +100,8 @@ function Dropdown(options) {
 if(document.getElementById('dd1')) {
   var dd1 = new Dropdown({
     id: 'dd1',
-    val: 'default',
-    data: ['default', 'new', 'random'],
+    val: 'Room1',
+    data: ['Room1', 'Room2', 'Room3'],
     selectRoom: function(value) {
       const hiddenInput = document.getElementById('room')
       hiddenInput.value = value
