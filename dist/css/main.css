@@ -117,7 +117,6 @@ button {
 	padding: 5px 10px;
 	font: inherit;
 	text-shadow: inherit;
-	font-size: larger;
 	cursor: pointer;
 }
 
@@ -139,6 +138,7 @@ button:hover {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	overflow: hidden;
 }
 
@@ -163,9 +163,10 @@ button:hover {
 	background-color: var(--dark3-color);
 	padding: var(--main-padding);
 	border-left: 1px solid var(--light-color);
-	width: 160px;
+	width: 100px;
 	display: flex;
 	flex-direction: column;
+	word-wrap: break-word;
 }
 
 .sidebar-room-container {
@@ -174,12 +175,15 @@ button:hover {
 	align-items: center;
 }
 
-/* .chat-form {
-} */
+.chat-form {
+	display: flex;
+	align-items: center;
+}
 
 .chat-form input{
-	width: 100%;
-	padding: 14px;
+	flex: 1;
+	/* width: 100%; */
+	padding: 5px 10px;
 }
 
 /* messages */
