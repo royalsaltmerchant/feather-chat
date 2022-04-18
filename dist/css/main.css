@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap');
 
 :root {
-	--dark-color: #969696;
+	--dark-color: #888888;
 	--dark3-color: #525151;
 	--dark2-color: #6e6e6e;
 	--light-color: #dadada;
 	--main-padding: 7px;
 	--border-radius: 2px;
 	--blue: rgb(88, 112, 158);
-	--blue2:rgb(132, 175, 255);
+	--blue2:rgb(171, 216, 255);
 	--purple: rgb(214, 192, 255);
 	--pink: rgb(255, 192, 229);
 	--yellow: rgb(253, 255, 152);
 	--orange: rgb(209, 123, 10);
-	--orange2:rgb(255, 154, 22);
+	--orange2:rgb(255, 194, 114);
 }
 
 * {
@@ -27,7 +27,7 @@ body {
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-size: 15px;
 	color: white;
-	text-shadow: 1px 1px 6px rgb(0, 0, 0);
+	text-shadow: 0px 0px 6px rgb(0, 0, 0);
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -97,6 +97,16 @@ main {
 	border-radius: var(--border-radius);
 }
 
+#room-form-item {
+	align-items: baseline;
+}
+
+.room-select {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
 input {
 	border: none;
 	outline: none;
@@ -121,7 +131,7 @@ button {
 }
 
 button:hover {
-	background-color: var(--orange);
+	background: linear-gradient(var(--orange2) 10%, var(--orange) 90%);
 }
 
 /* app */

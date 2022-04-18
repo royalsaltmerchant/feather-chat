@@ -30,15 +30,37 @@
 						required
 					/>
 				</div>
-				<div class="form-item">
+				<div class="form-item" id="room-form-item">
 					<label for="room">Room</label>
-					<div id="dd1"></div>
-					<input type="hidden" name="room" id="room" value="Room1">
+					<div class="room-select" id="room-select">
+						<div id="dd1"></div>
+						<input type="hidden" name="room" id="room" value="Room1" placeholder="Custom room name" required>
+						<a style="margin-top: 5px;" id="room-mode" onclick="customRoomToggle()">Custom Room?</a>
+					</div>
 				</div>
 				<br>
 				<button type="submit">Start</button>
 			</form>
 		</main>
-		<script src="./js/bundle.js"></script>
+		<script src="./js/dropdown.js"></script>
+		<script>
+			function customRoomToggle() {
+				if(document.getElementById('dd1')) {
+					document.getElementById('dd1').remove()
+					document.getElementById('room').type = 'text'
+					document.getElementById('room').value = ''
+					document.getElementById('room-mode').innerHTML = 'Back To List?'
+				} else {
+					var newDiv = document.createElement('div')
+					newDiv.id = 'dd1'
+					var parent = document.getElementById('room-select')
+					parent.insertBefore(newDiv, parent.firstChild)
+					dd1.render()
+					document.getElementById('room').type = 'hidden'
+					document.getElementById('room').value = 'Room1'
+					document.getElementById('room-mode').innerHTML = 'Custom Room?'		
+				}
+			}
+		</script>
 	</body>
 </html>
