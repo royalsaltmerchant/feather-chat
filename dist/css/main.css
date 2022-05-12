@@ -31,6 +31,7 @@ body {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	overscroll-behavior: none;
 }
 
 ul {
@@ -172,9 +173,19 @@ button:hover {
 	background-color: var(--dark3-color);
 	padding: var(--main-padding);
 	border-left: 1px solid var(--light-color);
-	width: 100px;
+	width: 150px;
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+#room-name {
+	width: 120px;
+	word-wrap: break-word;
+}
+
+#users li {
+	max-width: 142px;
 	word-wrap: break-word;
 }
 
